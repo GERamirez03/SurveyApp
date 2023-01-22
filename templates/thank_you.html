@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block title %} Thank You {% endblock %} 
+
+{% block content %} 
+
+    <h2>Thank you for your time!</h2>
+    <p>We appreciate you answering our questions.</p>
+    <p>Here's what we got from you: </p>
+
+    <ol>
+        {% for (question, answer) in record %}
+        <li>{{question}} {{answer}}</li>
+        {% endfor %}
+    </ol>
+
+{% endblock %}
